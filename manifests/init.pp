@@ -6,8 +6,7 @@
 #   include radarr
 class radarr {
   apt::ppa { 'ppa:marcushann/radarr': }
-
-  package { 'radarr': }
+  -> package { 'radarr': }
 
   user { 'radarr':
     ensure => present
